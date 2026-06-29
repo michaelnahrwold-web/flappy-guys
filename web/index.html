@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Guys - Web Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="mainMenu" class="menu active">
+            <h1>FLAPPY GUYS</h1>
+            
+            <div class="menu-section">
+                <label for="characterSelect">Select Character:</label>
+                <select id="characterSelect">
+                    <option value="blue">Blue Guy</option>
+                    <option value="red">Red Guy</option>
+                    <option value="yellow">Yellow Guy</option>
+                    <option value="green">Green Guy</option>
+                    <option value="purple">Purple Guy</option>
+                </select>
+            </div>
+            
+            <div class="menu-section">
+                <label for="difficultySelect">Select Difficulty:</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            
+            <div class="menu-buttons">
+                <button id="startBtn" class="btn btn-primary">START GAME</button>
+                <button id="soundToggleBtn" class="btn btn-secondary">🔊 Sound ON</button>
+            </div>
+        </div>
+        
+        <div id="gameOverMenu" class="menu">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+            <button id="restartBtn" class="btn btn-primary">PLAY AGAIN</button>
+            <button id="menuBtn" class="btn btn-secondary">MAIN MENU</button>
+        </div>
+        
+        <div id="hud" class="hud hidden">
+            <div class="score">Score: <span id="scoreValue">0</span></div>
+            <div class="high-score">High: <span id="highScoreValue">0</span></div>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+</html>
